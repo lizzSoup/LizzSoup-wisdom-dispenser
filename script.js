@@ -5,6 +5,7 @@ function turn() {
   const door = document.querySelector('.prize-door');
   const opening = document.querySelector('.opening');
   const prize = document.querySelector('.prize');
+  const dispenser = document.getElementById('dispenser');
 
   let name = "";
   let random = Math.ceil(Math.random() * 6);
@@ -70,7 +71,7 @@ function turn() {
     opening.classList.remove('hidden');
   }, 0)
   setTimeout(function(){
-    $('.one, .two, .three, .four, .five, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fifteen, .sixteen, .seventeen, .eighteen, twenty, .twenty1, twenty2, .twenty3, twenty4, .twenty5').effect('shake', 600);}, 2500);
+    $('.one, .two, .three, .four, .five, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fifteen, .sixteen, .seventeen, .eighteen, twenty, .twenty1, twenty2, .twenty3, twenty4, .twenty5').effect('shake', 700);}, 2500);
   setTimeout(function() {
     key.classList.remove('turned');
   }, 1500);
@@ -82,12 +83,19 @@ function turn() {
   }, 4000);
   setTimeout(function() {
     door.classList.remove('prize-door-open');
-  }, 8000);
+  }, 7000);
   setTimeout(function() {
-    $('#dispenser').fadeOut(500);
-  }, 9500);
+    $(dispenser).fadeOut(200);
+  }, 8500);
   setTimeout(function() {
     $(name).fadeIn(100);
-    $('#quote').fadeIn(4000);
-  }, 10600);
+    $('#quote').fadeIn(3000);
+  }, 9600);
+};
+
+function again() {
+  $('#quote').fadeOut(1000);
+  setTimeout(function() {
+    $(dispenser).fadeIn(500);
+  }, 1250);
 };
