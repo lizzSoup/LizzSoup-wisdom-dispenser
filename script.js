@@ -89,7 +89,7 @@ function turn() {
   }, 8500);
   setTimeout(function() {
     $(name).fadeIn(100);
-    $('#quote').fadeIn(3000);
+    $('#quote').fadeIn(2000);
   }, 9600);
 };
 
@@ -97,5 +97,5 @@ function again() {
   $('#quote').fadeOut(1000);
   setTimeout(function() {
     $(dispenser).fadeIn(500);
-  }, 1250);
+  }, 3250);
 };
