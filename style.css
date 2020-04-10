@@ -1,0 +1,483 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #1C1717;
+  color: rgb(170, 170, 170);
+  display: flex;
+  flex-flow: row wrap;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(230, 230, 230);
+  flex-basis: 100%;
+  font-size: 2.2em;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+p {
+  flex-basis: 100%;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+a {
+  color: rgb(170, 170, 170);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+button {
+  background: rgba(0, 0, 0, 0.0);
+  border: none;
+  border-radius: 8px;
+  color: rgb(170, 170, 170);
+  font-size: 20px;
+  margin: 15px 0;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  color: #1DA1F2;
+  cursor: grab;
+}
+
+#dispenser {
+  border: 10px solid black;
+  width: 25vw;
+}
+
+.twitter-tweet {
+  margin: 0 auto;
+}
+
+.dispenser-lid {
+  background: goldenrod;
+  height: 35px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dispenser-top {
+  background: rgb(208, 235, 243);
+  border-left: 15px solid rgb(190, 190, 190);
+  border-right: 15px solid rgb(190, 190, 190);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 500px;
+  margin: 0 auto;
+  padding: 50px 2px 0px 2px;
+  position: relative;
+  width: 100%;
+}
+
+.ball {
+  border-radius: 50%;
+  height: 90px;
+  opacity: 0.8;
+  width: 90px;
+}
+
+/* ball colors */
+.yellow {
+  background: radial-gradient(#F5E737, rgb(197, 186, 32));
+}
+
+.red {
+  background: radial-gradient(rgb(238, 37, 147), rgb(192, 25, 117));
+}
+
+.blue {
+  background: radial-gradient(#33B6F0, rgb(30, 138, 184));
+}
+
+.purple {
+  background: radial-gradient(#820CE6, rgb(97, 4, 179));
+}
+
+.orange {
+  background: radial-gradient(rgb(248, 72, 28), rgb(223, 55, 13));
+}
+
+.green {
+  background: radial-gradient(#4CEA83, rgb(33, 184, 86));
+}
+
+.ball.one {
+  z-index: 1;
+  bottom: 5px;
+  position: absolute;
+  left: 5px;
+}
+
+.ball.two {
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  left: 121px;
+}
+
+.ball.three {
+  z-index: 1;
+  position: absolute;
+  bottom: 200px;
+  right: 20px;
+}
+
+.ball.four {
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+.ball.five {
+  z-index: 5;
+  position: absolute;
+  right: 55px;
+  top: 40px;
+}
+
+.ball.six {
+  z-index: 5;
+  position: absolute;
+  right: 234px;
+  bottom: 200px;
+}
+
+.ball.seven {
+  z-index: 5;
+  position: absolute;
+  right: 30px;
+  top: 295px;
+}
+
+.ball.eight {
+  z-index: 5;
+  position: absolute;
+  left: 265px;
+  bottom: 251px;
+}
+
+.ball.nine {
+  z-index: 10;
+  position: absolute;
+  left: 250px;
+  bottom: 50px;
+}
+
+.ball.ten {
+  z-index: 10;
+  position: absolute;
+  left: 111px;
+  bottom: 5px;
+}
+
+.ball.twelve {
+  z-index: 10;
+  position: absolute;
+  left: 300px;
+  bottom: 50px;
+}
+
+.ball.thirteen {
+  z-index: 10;
+  position: absolute;
+  left: 200px;
+  bottom: 250px;
+}
+
+.ball.fourteen {
+  z-index: 15;
+  position: absolute;
+  left: 145px;
+  bottom: 56px;
+}
+
+.ball.fifteen {
+  z-index: 15;
+  position: absolute;
+  left: 135px;
+  bottom: 133px;
+}
+
+.dispenser-btm {
+  background: goldenrod;
+  border-top: 20px solid lightgrey;
+  height: 225px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.ball.ten {
+  z-index: 10;
+  position: absolute;
+  left: 111px;
+  bottom: 5px;
+}
+
+.ball.twelve {
+  z-index: 10;
+  position: absolute;
+  right: 30px;
+  bottom: 5px;
+}
+
+.ball.thirteen {
+  z-index: 10;
+  position: absolute;
+  right: 25px;
+  bottom: 250px;
+}
+
+.ball.fourteen {
+  z-index: 15;
+  position: absolute;
+  left: 145px;
+  bottom: 56px;
+}
+
+.ball.fifteen {
+  z-index: 15;
+  position: absolute;
+  left: 25px;
+  bottom: 133px;
+}
+
+.ball.sixteen {
+  z-index: 10;
+  position: absolute;
+  right: 111px;
+  bottom: 5px;
+}
+
+.ball.seventeen {
+  z-index: 10;
+  position: absolute;
+  left: 150px;
+  top: 145px;
+}
+
+.ball.eighteen {
+  z-index: 10;
+  position: absolute;
+  right: 200px;
+  top: 250px;
+}
+
+.ball.nineteen {
+  z-index: 15;
+  position: absolute;
+  right: 95px;
+  bottom: 136px;
+}
+
+.ball.twenty {
+  z-index: 15;
+  position: absolute;
+  left: 82px;
+  top: 333px;
+}
+
+.ball.twenty1 {
+  z-index: 15;
+  position: absolute;
+  right: 150px;
+  top: 90px;
+}
+
+.ball.twenty2 {
+  z-index: 15;
+  position: absolute;
+  left: 15px;
+  top: 333px;
+}
+
+.ball.twenty3 {
+  z-index: 15;
+  position: absolute;
+  right: 35px;
+  top: 78px;
+}
+
+.ball.twenty4 {
+  z-index: 15;
+  position: absolute;
+  left: 35px;
+  top: 204px;
+}
+
+.ball.twenty5 {
+  z-index: 15;
+  position: absolute;
+  right: 205px;
+  top: 145px;
+}
+
+.plate {
+  align-items: center;
+  background: rgb(175, 175, 175);
+  display: flex;
+  height: 125px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 125px;
+}
+
+.key-plate {
+  align-items: center;
+  background: lightgrey;
+  display: flex;
+  border-radius: 50%;
+  height: 110px;
+  justify-content: center;
+  width: 110px;
+}
+
+.key {
+  background: rgb(235, 235, 235);
+  box-shadow: 0 5px 30px #999;
+  height: 20px;
+  transition: transform 400ms;
+  width: 90px;
+}
+
+.key:hover {
+  background: whitesmoke;
+  cursor: grab;
+}
+
+.turned {
+  transform: rotate(45deg);
+  transition: transform 1500ms;
+}
+
+.detail {
+  background: rgb(201, 149, 17);
+  flex-basis: 100%;
+  height: 10px;
+  margin-top: 30px;
+  z-index: -1;
+}
+
+.prize-door {
+  background: lightgrey;
+  border-top: 5px solid rgb(196, 196, 196);
+  box-shadow: 1px 47px 20px rgba(0, 0, 0, 0.6);
+  height: 140px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 115px;
+  z-index: 20;
+}
+
+.prize-door-open {
+  border-top: none;
+  border-bottom: 5px solid rgb(196, 196, 196);
+  bottom: 145px;
+  box-shadow: 1px -10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.opening {
+  align-items: flex-end;
+  background: #222;
+  display: flex;
+  border-bottom: 3px solid rgb(77, 77, 77);
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+  display: hidden;
+  height: 115px;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  width: 115px;
+}
+
+.prize {
+  height: 110px;
+  width: 105px;
+}
+
+.ball.prize:hover {
+  cursor: grab;
+  z-index: 20;
+}
+
+.hidden {
+  display: none;
+}
+
+.quote {
+  text-align: right;
+}
+
+@media all and (min-width: 100px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #dispenser {
+    border: none;
+    width: 100vw;
+  }
+}
+
+@media all and (min-width: 500px) {
+  #dispenser {
+    width: 100vw;
+  }
+}
+
+@media all and (min-width: 700px) {
+  #dispenser {
+    width: 65vw;
+  }
+}
+
+@media all and (min-width: 800px) {
+  #dispenser {
+    width: 55vw;
+  }
+}
+
+@media all and (min-width: 900px) {
+  #dispenser {
+    width: 50vw;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  #dispenser {
+    width: 45vw;
+  }
+}
+
+@media all and (min-width: 1250px) {
+  #dispenser {
+    width: 35vw;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  #dispenser {
+    width: 30vw;
+  }
+}
+
+@media all and (min-width: 1850px) {
+  #dispenser {
+    width: 25vw;
+  }
+}
