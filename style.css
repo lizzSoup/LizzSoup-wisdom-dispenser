@@ -319,6 +319,11 @@ a {
   width: 125px;
 }
 
+.plate:hover {
+  background: rgb(151, 151, 151);
+  cursor: grab;
+}
+
 .key-plate {
   align-items: center;
   background: lightgrey;
@@ -335,11 +340,6 @@ a {
   height: 20px;
   transition: transform 400ms;
   width: 90px;
-}
-
-.key:hover {
-  background: whitesmoke;
-  cursor: grab;
 }
 
 .turned {
@@ -394,11 +394,6 @@ a {
   width: 105px;
 }
 
-.ball.prize:hover {
-  cursor: grab;
-  z-index: 20;
-}
-
 .hidden {
   display: none;
 }
@@ -435,6 +430,8 @@ button:hover {
     border: none;
     width: 100vw;
   }
+
+
 }
 
 @media all and (min-width: 500px) {

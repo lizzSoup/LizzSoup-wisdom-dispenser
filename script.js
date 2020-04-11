@@ -1,11 +1,12 @@
 // global variable and event listener
-const key = document.querySelector('.key');
-key.addEventListener('click', turn);
+const plate = document.querySelector('.plate');
+plate.addEventListener('click', turn);
 
 
   // turn() begins -----------------
 function turn() {
   // declare scoped variables
+  const key = document.querySelector('.key');
   const door = document.querySelector('.prize-door');
   const prize = document.querySelector('.prize');
   const dispenser = document.getElementById('dispenser');
