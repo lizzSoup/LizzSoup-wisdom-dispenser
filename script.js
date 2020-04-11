@@ -2,6 +2,7 @@ const key = document.querySelector('.key');
 key.addEventListener('click', turn);
 
 function turn() {
+  // declare variables
   const door = document.querySelector('.prize-door');
   const opening = document.querySelector('.opening');
   const prize = document.querySelector('.prize');
@@ -10,6 +11,7 @@ function turn() {
   let name = "";
   let random = Math.ceil(Math.random() * 6);
 
+  // Hide elements to be faded in
   $(prize).hide();
   $('.container').hide();
   $('#sarah').hide();
@@ -19,8 +21,10 @@ function turn() {
   $('#sensei').hide();
   $('#lee-ann').hide();
 
+  // Key transition added
   key.classList.add('turned');
 
+  // Show random color ball and quote
   switch(random) {
     case 1:
       console.log(random);
@@ -66,7 +70,7 @@ function turn() {
       break;
   };
 
-  // Timing functions are brittle - I wanted to avoid callback hell - recalculate durations if changing
+  // Timing functions are brittle - I wanted to avoid callback hell - recalculate durations if changing -
   setTimeout(function() {
     opening.classList.remove('hidden');
   }, 0)
@@ -93,6 +97,7 @@ function turn() {
   }, 9600);
 };
 
+// Fade out the twitter quote and fade in the dispenser 
 function again() {
   $('#quote').fadeOut(1000);
   setTimeout(function() {
