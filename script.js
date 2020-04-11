@@ -7,16 +7,14 @@ key.addEventListener('click', turn);
 function turn() {
   // declare scoped variables
   const door = document.querySelector('.prize-door');
-  const opening = document.querySelector('.opening');
   const prize = document.querySelector('.prize');
   const dispenser = document.getElementById('dispenser');
-
+  const cite = document.getElementById('cite');
   let name = "";
   let random = Math.ceil(Math.random() * 6);
 
   // Hide elements to be faded in
   $(prize).hide();
-  $('.container').hide();
   $('#sarah').hide();
   $('#deaz').hide();
   $('#jess').hide();
@@ -27,7 +25,7 @@ function turn() {
   // Key transition added
   key.classList.add('turned');
 
-  // Select random color ball and twitter quote
+  // Select random color ball and twitter quote to be displayed
   switch(random) {
     case 1:
       prize.classList.add('red');
@@ -62,10 +60,7 @@ function turn() {
   };
   // turn() ends -----------------
 
-  // Timing functions are brittle - These timeouts are not nested to avoid callback hell - recalculate durations if changing -
-  setTimeout(function() {
-    opening.classList.remove('hidden');
-  }, 0)
+  // Timing functions are brittle - These timeouts are not nested to avoid callback hell - recalculate durations if changing
   setTimeout(function(){
     $('.one, .two, .three, .four, .five, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fifteen, .sixteen, .seventeen, .eighteen, twenty, .twenty1, twenty2, .twenty3, twenty4, .twenty5').effect('shake', 700);}, 2500);
   setTimeout(function() {
@@ -85,14 +80,16 @@ function turn() {
   }, 8500);
   setTimeout(function() {
     $(name).fadeIn(100);
-    $('#quote').fadeIn(2000);
+    $(cite).fadeIn(5000);
+    $('#quote').fadeIn(5000);
   }, 9600);
 };
 
 // Fade out the twitter quote and fade in the dispenser 
 function again() {
+  $(cite).fadeOut(1000);
   $('#quote').fadeOut(1000);
   setTimeout(function() {
-    $(dispenser).fadeIn(500);
+    $(dispenser).fadeIn(1500);
   }, 3250);
 };

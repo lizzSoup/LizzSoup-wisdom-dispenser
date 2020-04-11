@@ -15,7 +15,7 @@ body {
 h1 {
   color: rgb(230, 230, 230);
   flex-basis: 100%;
-  font-size: 2.2em;
+  font-size: 2.4em;
   font-weight: 300;
   margin-bottom: 0;
   text-align: center;
@@ -35,6 +35,7 @@ a {
 
 #dispenser {
   border: 10px solid black;
+  margin-top: 50px;
   width: 25vw;
 }
 
@@ -70,7 +71,7 @@ a {
   width: 90px;
 }
 
-/* ball colors */
+/* colors */
 .yellow {
   background: radial-gradient(#F5E737, rgb(197, 186, 32));
 }
@@ -94,6 +95,7 @@ a {
 .green {
   background: radial-gradient(#4CEA83, rgb(33, 184, 86));
 }
+
 
 .ball.one {
   z-index: 1;
