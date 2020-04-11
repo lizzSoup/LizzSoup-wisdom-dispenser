@@ -1,8 +1,11 @@
+// global variable and event listener
 const key = document.querySelector('.key');
 key.addEventListener('click', turn);
 
+
+  // turn() begins -----------------
 function turn() {
-  // declare variables
+  // declare scoped variables
   const door = document.querySelector('.prize-door');
   const opening = document.querySelector('.opening');
   const prize = document.querySelector('.prize');
@@ -24,53 +27,42 @@ function turn() {
   // Key transition added
   key.classList.add('turned');
 
-  // Show random color ball and quote
+  // Select random color ball and twitter quote
   switch(random) {
     case 1:
-      console.log(random);
       prize.classList.add('red');
       prize.classList.remove('orange', 'yellow', 'green', 'blue', 'purple');
       name = "#sarah";
-      console.log(name, random);
       break;
     case 2:
-      console.log(random);
       prize.classList.add('orange');
       prize.classList.remove('red', 'yellow', 'green', 'blue', 'purple');
       name = "#deaz";
-      console.log(name, random);
       break;
     case 3:
-      console.log(random);
       prize.classList.add('yellow');
       prize.classList.remove('orange', 'red', 'green', 'blue', 'purple');
       name = "#jess";
-      console.log(name, random);
       break;    
     case 4:
-      console.log(random);
       prize.classList.add('green');
       prize.classList.remove('orange', 'yellow', 'red', 'blue', 'purple');
       name = "#tam";
-      console.log(name, random);
       break;
     case 5:
-      console.log(random);
       prize.classList.add('blue');
       prize.classList.remove('orange', 'yellow', 'green', 'red', 'purple');
       name = "#sensei";
-      console.log(name, random);
       break;
     case 6:
-      console.log(random);
       prize.classList.add('purple');
       prize.classList.remove('orange', 'yellow', 'green', 'blue', 'red');
       name = "#lee-ann";
-      console.log(name, random);
       break;
   };
+  // turn() ends -----------------
 
-  // Timing functions are brittle - I wanted to avoid callback hell - recalculate durations if changing -
+  // Timing functions are brittle - These timeouts are not nested to avoid callback hell - recalculate durations if changing -
   setTimeout(function() {
     opening.classList.remove('hidden');
   }, 0)
