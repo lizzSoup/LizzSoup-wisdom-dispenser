@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #1C1717;
+  background: rgb(5, 6, 14);
   color: rgb(170, 170, 170);
   display: flex;
   flex-flow: row wrap;
@@ -31,22 +31,6 @@ a {
   color: rgb(170, 170, 170);
   text-decoration: none;
   font-weight: 600;
-}
-
-button {
-  background: rgba(0, 0, 0, 0.0);
-  border: none;
-  border-radius: 8px;
-  color: rgb(170, 170, 170);
-  font-size: 20px;
-  margin: 15px 0;
-  padding: 8px 12px;
-  text-transform: uppercase;
-}
-
-button:hover {
-  color: #1DA1F2;
-  cursor: grab;
 }
 
 #dispenser {
@@ -82,7 +66,7 @@ button:hover {
 .ball {
   border-radius: 50%;
   height: 90px;
-  opacity: 0.8;
+  opacity: 0.9;
   width: 90px;
 }
 
@@ -390,7 +374,7 @@ button:hover {
 
 .opening {
   align-items: flex-end;
-  background: #222;
+  background: rgb(8, 9, 19);
   display: flex;
   border-bottom: 3px solid rgb(26, 32, 80);
   border-left: 2px solid rgb(26, 32, 80);
@@ -421,6 +405,24 @@ button:hover {
   text-align: right;
 }
 
+button {
+  background: rgba(0, 0, 0, 0.0);
+  border: none;
+  border-radius: 8px;
+  color: #1DA1F2;
+  font-size: 20px;
+  margin: 15px 0;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  color: whitesmoke;
+  cursor: grab;
+}
+
+
+/* Very not mobile first media queries -- refactor this! */
 @media all and (min-width: 100px) {
   body {
     margin: 0;
